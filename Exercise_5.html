@@ -1,0 +1,233 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Exercise_5.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <title>wpPusher</title>
+  </head>
+  <body>
+    <header class="section-header">
+      <logo class="logo">
+        <a href="#"
+          ><img
+            src="./assets/wppusher-logo copy.png"
+            alt="WP pusher logo"
+            class="logo__img"
+        /></a>
+      </logo>
+
+      <nav class="navigation">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Download</a></li>
+          <li><a href="#" class="nav__link">Learn more</a></li>
+          <li><a href="#" class="nav__link">Pricing</a></li>
+          <li><a href="#" class="nav__link">Help</a></li>
+          <li>
+            <a href="#" class="nav__link btn__nav">Account</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <section class="section-checkout">
+      <div class="checkout-container">
+        <div class="checkout">
+          <div class="checkout__heading__primary">
+            <h2>Checkout</h2>
+          </div>
+          <div class="checkout__form">
+            <form>
+              <div class="checkout__basic__info">
+                <div class="checkout__info__heading">
+                  <p class="checkout__num">
+                    <span class="number">1</span>
+                  </p>
+                  <h3 class="checkout__heading__secondary">
+                    Your Basic Information
+                  </h3>
+                </div>
+                <div class="basic__info">
+                  <div class="form__list">
+                    <label for="firstname">First Name</label>
+                    <input
+                      type="text"
+                      required
+                      id="firstname"
+                      placeholder="Joshua"
+                    />
+                  </div>
+                  <div class="form__list">
+                    <label for="lastname">Last Name</label>
+                    <input
+                      type="text"
+                      required
+                      id="lastname"
+                      placeholder="Ndife"
+                    />
+                  </div>
+                  <div class="form__list form__span">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      required
+                      id="email"
+                      placeholder="ndifejoshua@gmail.com"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout__payment__info">
+                <div class="checkout__info__heading">
+                  <p class="checkout__num">
+                    <span class="number">2</span>
+                  </p>
+                  <h3 class="checkout__heading__secondary">
+                    Your Payment Information
+                  </h3>
+                </div>
+                <div class="payment__info">
+                  <label for="creditcard">Credit Card</label>
+                  <input
+                    type="number"
+                    required
+                    id="creditcard"
+                    placeholder="Card Number"
+                  />
+                </div>
+              </div>
+              <div class="other">
+                <div class="btn">
+                  <button type="submit" class="btn__checkout">
+                    Buy WP Pusher
+                  </button>
+                </div>
+
+                <div class="support">
+                  <ion-icon
+                    name="help-circle-outline"
+                    class="support__icon"
+                  ></ion-icon>
+
+                  <p class="support__text">
+                    <span class="help">Need any help?</span> Don't hesitate to
+                    <a href="#" class="contact__support">contact support!</a>
+                  </p>
+                </div>
+                <div class="stripe__img__box">
+                  <img
+                    src="./assets/powered_by_stripe.png"
+                    alt="powered by stripe"
+                    class="stripe__img"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="checkout-plan">
+          <div class="plan">
+            <h2 class="plan__heading">Freelancer</h2>
+            <p class="plan__pricing">
+              <span class="currency">$</span><span class="amount">99</span
+              ><span class="duration">/year</span>
+            </p>
+            <p class="renewal">
+              Automatically renews<br />
+              after 1 year
+            </p>
+          </div>
+          <ul class="plan__features">
+            <li class="plan__feature">
+              <ion-icon
+                name="checkmark-circle-outline"
+                class="plan__feature__icon"
+              ></ion-icon>
+              <p class="plan__feature__text">Use on 5 client sites</p>
+            </li>
+            <li class="plan__feature">
+              <ion-icon
+                name="checkmark-circle-outline"
+                class="plan__feature__icon"
+              ></ion-icon>
+              <p class="plan__feature__text">Private repositories</p>
+            </li>
+            <li class="plan__feature">
+              <ion-icon
+                name="checkmark-circle-outline"
+                class="plan__feature__icon"
+              ></ion-icon>
+              <p class="plan__feature__text">Email support</p>
+            </li>
+          </ul>
+          <div class="agency__box">
+            <p>Need<span class="num"> 20</span> client sites?</p>
+
+            <p class="agency__text">
+              <a href="#" class="agency__plan">
+                Switch to the<i> Agency</i> plan.
+              </a>
+            </p>
+          </div>
+          <div class="testimonials">
+            <figure class="testimonial">
+              <blockquote class="testimonial__text">
+                FTP is horrible to deal with.
+                <span class="wp">WP Pusher </span>solves that issue, and the
+                customer support is awesome!
+              </blockquote>
+              <div class="author__box">
+                <img
+                  src="./assets/Bitmap.png"
+                  alt="face card of customer Dave Bryson"
+                  class="testimonial__img"
+                />
+                <p class="testimonial__author">Kirk Beard</p>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-footer">
+      <footer class="footer">
+        <p>
+          &copy; 2018 WP Pusher IVS ·
+          <a href="#" class="term">Terms of Service</a>
+        </p>
+      </footer>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

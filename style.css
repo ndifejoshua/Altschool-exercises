@@ -1,0 +1,152 @@
+html {
+  font-size: ;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f4f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+
+  color: #087f5b;
+  text-shadow: 0 4px 4px #00000040;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-block-end: 100px;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-front {
+  background: #ffffff;
+  color: #444;
+  flex-direction: column;
+}
+
+.card-back {
+  background: #087f5b;
+  color: white;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background: white;
+  color: #087f5b;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-inner {
+    height: 180px;
+  }
+
+  .card-front h2,
+  .card-front p {
+    font-size: 1rem;
+  }
+
+  .card-back a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  border-top: 1px solid #087f5b;
+  z-index: 1000;
+}
+
+.footer a {
+  color: #087f5b;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-weight: 400;
+  color: #666;
+}

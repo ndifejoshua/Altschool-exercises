@@ -1,0 +1,150 @@
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MAIN CSS */
+body {
+  font-family: "lato", sans-serif;
+  letter-spacing: 0;
+}
+
+.header-wrapper {
+  border-bottom: 8px solid #999;
+}
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-inline-start: 24px;
+  padding-block-end: 64px;
+  padding-block-start: 96px;
+}
+.heading-primary {
+  width: max-content;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 48px;
+}
+.heading-text {
+  font-size: 20px;
+  line-height: 1.5;
+
+  max-width: 415px;
+}
+
+.main-container {
+  background-color: #666;
+  padding-block-start: 72px;
+  padding-block-end: 66px;
+}
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-inline: 24px;
+  padding-block-end: 24px;
+  padding-block-start: 8px;
+  border-bottom: 8px solid hsla(0, 0%, 60%, 1);
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  /* position: relative; */
+}
+.banner {
+  background-color: #ffbf00;
+  border-bottom: 8px solid #cc9900;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  padding: 16px 32px 15px 32px;
+  max-width: max-content;
+  margin-inline-start: -32px;
+
+  /* position: absolute;
+  top: 8px;
+  left: -8px; */
+}
+.text {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  /* padding: 16px 24px 24px 24px; */
+}
+.first-text {
+  margin-bottom: 16px;
+}
+.highlight-green {
+  color: #009966;
+}

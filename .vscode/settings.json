@@ -1,0 +1,8 @@
+{
+  "editor.autoClosingOvertype": "never",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.overtypeCursorStyle": "block",
+  "editor.overtypeOnPaste": true,
+  "liveServer.settings.port": 5502
+}

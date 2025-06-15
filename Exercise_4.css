@@ -1,0 +1,351 @@
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MAIN CSS */
+html {
+  font-size: 62.5%;
+  /* 10px/16px *100
+  1rem=10px */
+}
+
+body {
+  letter-spacing: 0;
+  font-family: "Sofia Sans", sans-serif;
+  /* font-optical-sizing: auto; */
+  /* font-weight: <weight>;
+  font-style: normal; */
+  background-color: #f7fdfc;
+  padding: 0 2rem;
+}
+.signup_CTA {
+  padding: 8rem 0;
+}
+
+.container {
+  max-width: 144rem;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  gap: 12rem;
+}
+.cta-text-box {
+  max-width: 46rem;
+  margin-block-start: 12.4rem;
+}
+.heading-secondary {
+  margin-block-start: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+.mobile-text {
+  display: none;
+}
+.cta-text {
+  margin-block-start: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.56;
+  letter-spacing: 0;
+  color: #737373;
+}
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+  column-gap: 2.4rem;
+  row-gap: 3rem;
+  box-shadow: 0 0.4rem 5rem 0 #0408131a;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  width: 58rem;
+}
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1rem #2ec4b6;
+}
+.cta-form label {
+  display: block;
+  margin-block-end: 0.8rem;
+  /* margin-block-start: 3rem; */
+  color: #011c34;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: 0.1px;
+  vertical-align: middle;
+  font-family: inherit;
+}
+/* .cta-form select {
+  font-family: inherit;
+  color: #737373;
+  letter-spacing: 0.2px;
+  font-size: 1.2rem;
+} */
+.cta-form select,
+form::placeholder {
+  color: #737373;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  vertical-align: middle;
+  font-family: inherit;
+}
+/* .cta-form .form-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.cta-form input,
+.cta-form select {
+  flex: 1;
+} */
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  height: 4.8rem;
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+}
+input[type="date"] {
+  color: #737373;
+}
+
+.grid-span {
+  grid-column: span 2;
+}
+.margin_top__sm {
+  margin-block-start: 3rem;
+}
+.btn-form {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  text-align: center;
+  box-shadow: 0px 10px 40px 0px #0000001a;
+  background: #2ec4b6;
+  margin-block-start: 3rem;
+  padding-block: 1.6rem;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+}
+.btn-form:hover {
+  cursor: pointer;
+  background-color: #6de4d8;
+  color: #000;
+}
+.terms {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.78;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-align: center;
+  margin-block-start: 1.6rem;
+}
+.terms-mobile {
+  display: none;
+}
+
+.link_agree:link,
+.link_agree:visited {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.78;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 0%;
+  text-decoration-thickness: 0%;
+  color: #2ec4b6;
+}
+.link_agree:hover,
+.link_agree:active {
+  cursor: pointer;
+}
+.status-bar {
+  display: none;
+}
+/* MEDIA QUERIES */
+@media (max-width: 63rem) {
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+  }
+  .cta-text-box {
+    margin-block-start: 0;
+  }
+  .heading-secondary {
+    margin-block-start: 4rem;
+  }
+  .cta-form {
+    width: 100%;
+    padding: 3.2rem;
+  }
+}
+@media (max-width: 30rem) {
+  .container {
+    display: block;
+    margin: 0 auto;
+    padding-block-end: 6.4rem;
+  }
+  .cta-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    gap: 2.4rem;
+    position: relative;
+  }
+  .signup_CTA {
+    padding: 0;
+  }
+  .mobile-text {
+    display: block;
+  }
+  .desktop-text {
+    display: none;
+  }
+  .status-bar {
+    height: 4.4rem;
+    padding-inline-end: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 3rem;
+  }
+  .time_status-bar {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 18px;
+    letter-spacing: -0.17px;
+    text-align: center;
+    color: #011c34;
+  }
+  .cta-text-box {
+    margin-block-start: 3rem;
+    margin-block-end: 4rem;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .heading-secondary {
+    margin-block-start: 4rem;
+
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .cta-text {
+    margin-block-start: 1.2rem;
+    font-weight: 300;
+  }
+  .margin_top__sm {
+    margin-block-start: 1.8rem;
+  }
+  .btn-form {
+    margin-block-end: 1.4rem;
+  }
+  .terms {
+    display: none;
+  }
+  .terms-mobile {
+    display: block;
+    margin-inline: 1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.78;
+    letter-spacing: 0.2px;
+    vertical-align: middle;
+    text-align: center;
+    margin-block-start: 2.4rem;
+  }
+}
